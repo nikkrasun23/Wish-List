@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LG5-FF-uSJ">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wish List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WishListViewController" customModule="Wish_List__Lesson_95_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OXb-IO-CA6">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NewWishTableViewCell" rowHeight="98" id="hUx-XF-cWd" customClass="NewWishTableViewCell" customModule="Wish_List__Lesson_95_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hUx-XF-cWd" id="m8L-ZT-Ea0">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="98"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUy-0Q-HJR">
+                                                    <rect key="frame" x="70" y="11" width="303" height="76"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-Oj-exz">
+                                                    <rect key="frame" x="30" y="34" width="30" height="30"/>
+                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="LVp-rn-dqk"/>
+                                                        <constraint firstAttribute="width" constant="30" id="fbT-3o-ZbS"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l9F-Oj-exz" firstAttribute="centerY" secondItem="m8L-ZT-Ea0" secondAttribute="centerY" id="Cxn-ri-pKR"/>
+                                                <constraint firstItem="cUy-0Q-HJR" firstAttribute="top" secondItem="m8L-ZT-Ea0" secondAttribute="topMargin" id="EfW-ur-Q39"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cUy-0Q-HJR" secondAttribute="trailing" id="HwY-so-0qH"/>
+                                                <constraint firstItem="cUy-0Q-HJR" firstAttribute="bottom" secondItem="m8L-ZT-Ea0" secondAttribute="bottomMargin" id="hK4-36-a37"/>
+                                                <constraint firstItem="cUy-0Q-HJR" firstAttribute="leading" secondItem="l9F-Oj-exz" secondAttribute="trailing" constant="10" id="lQm-4u-KAK"/>
+                                                <constraint firstItem="l9F-Oj-exz" firstAttribute="leading" secondItem="m8L-ZT-Ea0" secondAttribute="leadingMargin" constant="10" id="lmS-ad-kYc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="cUy-0Q-HJR" id="Sx4-87-LGz"/>
+                                            <outlet property="statusView" destination="l9F-Oj-exz" id="RcA-Xn-it8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="OXb-IO-CA6" secondAttribute="bottom" id="17l-Hc-wmu"/>
+                            <constraint firstItem="OXb-IO-CA6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Tx-4P-39M"/>
+                            <constraint firstItem="OXb-IO-CA6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EBg-Fd-x3s"/>
+                            <constraint firstItem="OXb-IO-CA6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="X6T-va-DdB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dAc-GZ-CUq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XV2-Gc-SiZ">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="60u-ax-MnB" kind="show" id="9SV-NF-f9J"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="OXb-IO-CA6" id="dDn-ya-dBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="-2.1126760563380285"/>
+        </scene>
+        <!--New Wish View Controller-->
+        <scene sceneID="uoY-KW-NS1">
+            <objects>
+                <viewController id="60u-ax-MnB" customClass="NewWishViewController" customModule="Wish_List__Lesson_95_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HfT-sI-G5r">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wish" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qcg-UI-ePL">
+                                <rect key="frame" x="40" y="143" width="313" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31h-Kq-ZK2">
+                                <rect key="frame" x="126.66666666666669" y="217" width="140" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="LhK-bX-AcN"/>
+                                    <constraint firstAttribute="width" constant="140" id="cbf-Mf-cx3"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SAVE">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="savePressed:" destination="60u-ax-MnB" eventType="touchUpInside" id="B46-Pq-kf3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4y4-zu-1k5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qcg-UI-ePL" firstAttribute="leading" secondItem="4y4-zu-1k5" secondAttribute="leading" constant="40" id="Gbc-hc-3BG"/>
+                            <constraint firstItem="4y4-zu-1k5" firstAttribute="trailing" secondItem="Qcg-UI-ePL" secondAttribute="trailing" constant="40" id="IcP-6Z-vbf"/>
+                            <constraint firstItem="31h-Kq-ZK2" firstAttribute="centerX" secondItem="HfT-sI-G5r" secondAttribute="centerX" id="dRd-mf-UVw"/>
+                            <constraint firstItem="31h-Kq-ZK2" firstAttribute="top" secondItem="Qcg-UI-ePL" secondAttribute="bottom" constant="40" id="y3n-OH-Vyk"/>
+                            <constraint firstItem="Qcg-UI-ePL" firstAttribute="top" secondItem="4y4-zu-1k5" secondAttribute="top" constant="40" id="yq7-kn-Hpy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yVY-N7-3SN"/>
+                    <connections>
+                        <outlet property="wishTextField" destination="Qcg-UI-ePL" id="ud6-g8-Wj6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8LG-JG-Grd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1862" y="-2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3NB-fF-a0H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LG5-FF-uSJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DhG-SN-YyI">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eKw-Ts-VlG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jd1-px-vuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.00763358778624" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
